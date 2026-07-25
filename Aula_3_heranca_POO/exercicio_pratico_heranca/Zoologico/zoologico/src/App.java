@@ -1,3 +1,7 @@
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Mamifero cachorro = new Mamifero(
@@ -34,6 +38,17 @@ public class App {
             true);
 
         jacare.comer();
+
+
+        Animal animal = new Mamifero("", "", 0, true);
+        Animal ave = new Ave("", "", 0, true);
+
+        List<Animal> animais = new ArrayList<>();
+        
+        animais.add(ave);
+        animais.add(animal);
+        animais.add(jacare);
+        animais.add(galinha);
 
     }
 }
