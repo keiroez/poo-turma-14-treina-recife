@@ -5,8 +5,14 @@ public class Galinha extends Ave {
     }
 
     @Override
-    public void emitirSom(){
-        System.out.println("Có Có");
-    };
+    public void comer() {
+        System.out.println("Comendo milho");
+        
+    }
+
+    @Override
+    public void emitirSom() {
+        System.out.println("có có");
+    }
 
 }

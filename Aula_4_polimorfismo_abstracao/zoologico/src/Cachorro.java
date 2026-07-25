@@ -7,9 +7,17 @@ public class Cachorro extends Mamifero {
     }
 
     @Override
-    public void emitirSom(){
-        System.out.println("Au Au");
-    };
+    public void comer() {
+        System.out.println("Comendo ração");
+        
+    }
+
+    @Override
+    public void emitirSom() {
+        System.out.println("au au");
+    }
+
+ 
     
 
 }

@@ -1,15 +1,11 @@
-public class Animal {
+public abstract  class Animal {
     private String nome;
     private String sexo;
     private int idade;
 
-    public void comer(){
-        System.out.println(nome+" está se alimentando");
-    }
+    public abstract void comer();
 
-    public void emitirSom(){
-        System.out.println("Barulho nao definido");
-    };
+    public abstract void emitirSom();
 
     public Animal(String nome, String sexo, int idade) {
         this.nome = nome;

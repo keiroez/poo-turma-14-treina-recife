@@ -40,7 +40,7 @@ public class App {
 
        }
 
-       Animal animal = new Animal("animal", "animal", 0);
+    //    Animal animal = new Animal("animal", "animal", 0);
 
     }
 }

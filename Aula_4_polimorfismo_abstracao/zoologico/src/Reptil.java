@@ -1,4 +1,4 @@
-public class Reptil extends Animal {
+public abstract  class Reptil extends Animal {
     private boolean isAquatico;
 
     public Reptil(String nome, String sexo, int idade, boolean isAquatico) {

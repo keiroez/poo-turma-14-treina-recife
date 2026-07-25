@@ -1,4 +1,4 @@
-public class Mamifero extends Animal {
+public abstract  class Mamifero extends Animal {
     private boolean isTerrestre;
 
     public Mamifero(String nome, String sexo, int idade, boolean isTerrestre) {
