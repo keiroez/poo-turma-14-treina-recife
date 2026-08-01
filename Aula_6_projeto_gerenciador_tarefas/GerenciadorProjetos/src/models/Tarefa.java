@@ -20,7 +20,10 @@ public class Tarefa implements ToDTOInterface<TarefaDTO> {
         return new TarefaDTO(this);
     }
 
-    public Tarefa(Long id, String titulo, String descricao, Prioridade prioridade, StatusTarefa status, Usuario usuario,
+    public Tarefa(Long id, String titulo, String descricao, 
+            Prioridade prioridade, 
+            StatusTarefa status, 
+            Usuario usuario,
             Projeto projeto) {
         this.id = id;
         this.titulo = titulo;
@@ -29,6 +32,9 @@ public class Tarefa implements ToDTOInterface<TarefaDTO> {
         this.status = status;
         this.usuario = usuario;
         this.projeto = projeto;
+
+        projeto.getTarefas().add(this);
+        usuario.getTarefas().add(this);
     }
 
 

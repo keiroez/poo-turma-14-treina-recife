@@ -2,6 +2,7 @@ package models;
 
 import enums.StatusUsuario;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import models.dto.ToDTOInterface;
 import models.dto.UsuarioDTO;
@@ -28,6 +29,7 @@ public class Usuario implements ToDTOInterface<UsuarioDTO> {
         this.senha = senha;
         this.dataNascimento = dataNascimento;
         this.status = status;
+        this.tarefas = new ArrayList<>();
     }
 
     public Long getId() {

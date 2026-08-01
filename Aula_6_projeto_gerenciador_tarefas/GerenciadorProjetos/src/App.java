@@ -46,5 +46,7 @@ public class App {
             usuarioMaria, 
             projeto
         );
+
+        System.out.println(projeto.getTarefas().size());
     }
 }

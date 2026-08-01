@@ -2,6 +2,7 @@ package models;
 
 import enums.StatusProjeto;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import models.dto.ProjetoDTO;
 import models.dto.ToDTOInterface;
@@ -29,6 +30,7 @@ public class Projeto implements ToDTOInterface<ProjetoDTO> {
         this.dataConclusao = dataConclusao;
         this.status = status;
         this.responsavel = responsavel;
+        this.tarefas = new ArrayList<>();
     }
 
     public Long getId() {
