@@ -2,6 +2,7 @@ package models;
 
 import enums.StatusUsuario;
 import java.time.LocalDate;
+import java.util.List;
 import models.dto.ToDTOInterface;
 import models.dto.UsuarioDTO;
 
@@ -11,14 +12,15 @@ public class Usuario implements ToDTOInterface<UsuarioDTO> {
     private LocalDate dataNascimento;
     private StatusUsuario status;
 
+    private List<Tarefa> tarefas;
 
     @Override
     public UsuarioDTO toDTO() {
         return new UsuarioDTO(this);
     }
 
-    public Usuario(Long id, String nome, String cpf, String email, String senha, LocalDate dataNascimento,
-            StatusUsuario status) {
+    public Usuario(Long id, String nome, String cpf, String email, String senha, 
+        LocalDate dataNascimento, StatusUsuario status) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -82,6 +84,14 @@ public class Usuario implements ToDTOInterface<UsuarioDTO> {
 
     public void setStatus(StatusUsuario status) {
         this.status = status;
+    }
+
+    public List<Tarefa> getTarefas() {
+        return tarefas;
+    }
+
+    public void setTarefas(List<Tarefa> tarefas) {
+        this.tarefas = tarefas;
     }
 
 }

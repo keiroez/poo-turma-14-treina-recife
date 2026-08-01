@@ -2,6 +2,7 @@ package models;
 
 import enums.StatusProjeto;
 import java.time.LocalDate;
+import java.util.List;
 import models.dto.ProjetoDTO;
 import models.dto.ToDTOInterface;
 
@@ -11,6 +12,8 @@ public class Projeto implements ToDTOInterface<ProjetoDTO> {
     private LocalDate dataInicio, dataConclusao;
     private StatusProjeto status;
     private Usuario responsavel;
+
+    private List<Tarefa> tarefas;
 
     @Override
     public ProjetoDTO toDTO() {
@@ -82,6 +85,14 @@ public class Projeto implements ToDTOInterface<ProjetoDTO> {
 
     public void setResponsavel(Usuario responsavel) {
         this.responsavel = responsavel;
+    }
+
+    public List<Tarefa> getTarefas() {
+        return tarefas;
+    }
+
+    public void setTarefas(List<Tarefa> tarefas) {
+        this.tarefas = tarefas;
     }
 
 }
